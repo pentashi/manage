@@ -11,10 +11,11 @@ import React,{useState} from 'react';
     return(
     
         <div className="color-picker-container">
-        <h1>Color picker</h1>
+        <h1>By Achapi pentashi</h1>
+        <h2>Color Picker</h2>
         <div className="color-display " style={{backgroundColor: color}}>
 
-        <p>selected color: {color}</p>
+        <p>Selected Color: {color}</p>
 
         </div>
         <label htmlFor="">select a color</label>
