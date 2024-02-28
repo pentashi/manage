@@ -1,14 +1,11 @@
-// src/App.js
-import React, { useState } from 'react';
-import Calculator from './Calculator';
-import './index.css';
-
+import ToDoList from "./ToDoList.jsx";
 function App() {
   return (
     <div className="App">
-      <h1>React Calculator</h1>
-      <Calculator />
-    </div>
+
+
+    <ToDoList/>
+      </div>
   );
 }
 
