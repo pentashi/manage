@@ -1,10 +1,10 @@
-import ToDoList from "./ToDoList.jsx";
+import DigitalClock from "./DigitalClock";
 function App() {
   return (
     <div className="App">
 
 
-    <ToDoList/>
+    <DigitalClock/>
       </div>
   );
 }
