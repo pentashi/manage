@@ -30,6 +30,8 @@ function DigitalClock() {
   return (
     <>
       <div className="clock-container">
+      <h1>By Achapi Pentashi</h1>
+
         <div className="clock">
           <span>{formatTime()}</span>
         </div>
