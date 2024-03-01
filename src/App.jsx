@@ -1,12 +1,13 @@
-import DigitalClock from "./DigitalClock";
-function App() {
+// App.js
+import React from 'react';
+import Stopwatch from './Stopwatch.jsx';
+const App = () => {
   return (
-    <div className="App">
-
-
-    <DigitalClock/>
-      </div>
+    <div>
+      <Stopwatch />
+     
+    </div>
   );
-}
+};
 
 export default App;
