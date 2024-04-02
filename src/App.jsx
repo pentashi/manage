@@ -1,12 +1,18 @@
-// App.js
 import React from 'react';
-import Stopwatch from './Stopwatch.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Contact from './components/Contact/Contact';
+import About from './components/About/About';
+import Home from './components/Home/Home';
+
 const App = () => {
   return (
-    <div>
-      <Stopwatch />
-     
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 };
 
