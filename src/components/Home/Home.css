@@ -1,108 +1,182 @@
+/* Home.css */
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .home-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.nav-links {
+  display: none;
+}
+
+/* Show navbar links when showNavLinks is true */
+.nav-links.show {
+  display: flex;
+}
+.header h1 {
+  font-size: 36px;
+}
+
+.nav-link {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Video section */
+.video-section {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+/* Additional info */
+.additional-info {
+  margin-top: 50px;
+}
+
+.additional-info h2 {
+  font-size: 24px;
+}
+
+.additional-info p {
+  font-size: 18px;
+}
+
+.additional-info ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.additional-info li {
+  margin-bottom: 10px;
+}
+/* Home.css */
+
+/* Navbar styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #333; /* Change the color of the header text */
+}
+
+.nav-link {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Apply outstanding color to navbar links */
+.nav-link {
+  color: #ff5733; /* Change the color of the navbar links */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #e92600; /* Change the color of the navbar links on hover */
+}
+/* Home.css */
+
+/* Navbar styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #333; /* Change the color of the header text */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Apply outstanding color to navbar links */
+.nav-link {
+  color: #ff5733; /* Change the color of the navbar links */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #e92600; /* Change the color of the navbar links on hover */
+}
+
+/* Hide navbar links on mobile devices */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
+}
+
+/* Side button styles */
+.side-button {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Show side button on mobile devices */
+@media screen and (max-width: 768px) {
+  .side-button {
+    display: block;
   }
-  
-  .header h1 {
-    font-size: 36px;
-  }
-  
-  .nav-link {
-    margin: 0 10px;
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .video-section {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .video-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-  }
-  
-  .additional-info {
-    margin-top: 50px;
-  }
-  
-  .additional-info h2 {
-    font-size: 24px;
-  }
-  
-  .additional-info p {
-    font-size: 18px;
-  }
-  
-  .additional-info ul {
-    list-style: none;
-    padding-left: 20px;
-  }
-  
-  .additional-info li {
-    margin-bottom: 10px;
-  }
-  /* Home.css */
-.home-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header {
-    background-color: #dacfcf;
-    color: white;
-    padding: 1rem;
-  }
-  
-  .sidebar {
-    background-color: #f4f4f4;
-    width: 200px;
-    padding: 1rem;
-    display: none; /* Hide sidebar by default */
-  }
-  
-  .content {
-    flex: 1;
-    padding: 1rem;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      display: block; /* Show sidebar on smaller screens */
-    }
-    .content {
-      margin-left: 200px; /* Move content to right to accommodate sidebar */
-    }
-  }
-  
+}

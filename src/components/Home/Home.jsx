@@ -1,37 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import '../Footer';
 
 const Home = () => {
+  const [showNavLinks, setShowNavLinks] = useState(false);
+
+  const toggleNavLinks = () => {
+    setShowNavLinks(!showNavLinks);
+  };
+
   return (
     <div className="home-container">
-      <header className="header">
+       <header className="header">
         <h1>Welcome to School Management Portal</h1>
-        <nav>
-          <ul>
+        <nav className="navbar">
+          <div className="side-button" onClick={toggleNavLinks}>
+            &#9776; {/* Hamburger icon */}
+          </div>
+          <ul className={`nav-links ${showNavLinks ? 'show' : ''}`}>
             <li><Link to="/about" className="nav-link">About Us</Link></li>
             <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
           </ul>
         </nav>
       </header>
-      <div className="sidebar">
-        <h2>Menu</h2>
-        <ul>
-          <li><Link to="/about" className="nav-link">About Us</Link></li>
-          <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
-        </ul>
-      </div>
       <div className="content">
         <div className="video-section">
+          {/* Your video section content */}
           <video className="background-video" autoPlay loop muted>
             <source src="https://videos.pexels.com/video-files/1580505/1580505-hd_1920_1080_30fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="video-overlay"></div>
-          <div className="video-content">
-            <h2>Explore Our School Management Portal</h2>
-            <p>Watch our introduction video to learn more about our school management system and how it can help you efficiently manage your school.</p>
-          </div>
         </div>
         <div className="additional-info">
           <h2>Why Choose Our School Management System?</h2>
@@ -47,5 +47,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
